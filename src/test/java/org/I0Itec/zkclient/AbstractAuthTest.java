@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.I0Itec.zkclient.exception.ZkException;
-import org.apache.log4j.Logger;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooDefs;
@@ -32,11 +31,13 @@ import org.apache.zookeeper.data.Id;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class AbstractAuthTest {
     protected ZkClient _client;
     protected ZkServer _zkServer;
-    protected static final Logger LOG = Logger.getLogger(AbstractAuthTest.class);
+    protected static final Logger LOG = LoggerFactory.getLogger(AbstractAuthTest.class);
 
     @Before
     public void setUp() throws Exception {

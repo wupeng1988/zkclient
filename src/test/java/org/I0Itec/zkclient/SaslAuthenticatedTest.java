@@ -30,16 +30,17 @@ import javax.security.auth.login.Configuration;
 import org.I0Itec.zkclient.exception.ZkAuthFailedException;
 import org.I0Itec.zkclient.exception.ZkException;
 import org.I0Itec.zkclient.exception.ZkTimeoutException;
-import org.apache.log4j.Logger;
 import org.apache.zookeeper.ZooDefs.Ids;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SaslAuthenticatedTest {
-    protected static final Logger LOG = Logger.getLogger(SaslAuthenticatedTest.class);
+    protected static final Logger LOG = LoggerFactory.getLogger(SaslAuthenticatedTest.class);
     static final String ZK_AUTH_PROVIDER = "zookeeper.authProvider.1";
     static final String ZK_ALLOW_FAILED_SASL = "zookeeper.allowSaslFailedClients";
 

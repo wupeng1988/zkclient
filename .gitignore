@@ -5,3 +5,6 @@
 .gradle
 build-eclipse
 build
+target/
+.idea
+*.iml
